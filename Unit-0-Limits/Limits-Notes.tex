@@ -220,16 +220,16 @@ There are many possible behaviors of limits.
 
 \begin{itemize}
     \item The right-hand and left-hand limits may both exist and be equal.
-    \begin{center}\includegraphics[scale = 0.5]{Images/PossibleBehavior1.png}\end{center}
+    \begin{center}\includegraphics[scale = 0.35]{Images/PossibleBehavior1.png}\end{center}
     \item The right-hand and left-hand limits may both exist, but may fail to be equal.
-    \begin{center}\includegraphics[scale = 0.5]{Images/PossibleBehavior2.png}\end{center}
+    \begin{center}\includegraphics[scale = 0.35]{Images/PossibleBehavior2.png}\end{center}
     \item A right- and/or left-hand limit could fail to exist due to blowing up to $\pm\infty$.
     (Example: Consider the function $\frac{1}{x}$ near $x = 0$.) In this case, we either say the
     limit blows up to infinity, or that the limit does not exist because $\infty$ is not a real number!
-    \begin{center}\includegraphics[scale = 0.5]{Images/PossibleBehavior3.png}\end{center}
+    \begin{center}\includegraphics[scale = 0.35]{Images/PossibleBehavior3.png}\end{center}
     \item A right- and/or left-hand limit could fail to exist because it oscillates beteen many values
     and never settles down. In this case, we say the limit does not exist.
-    \begin{center}\includegraphics[scale = 0.5]{Images/PossibleBehavior4.png}\end{center}
+    \begin{center}\includegraphics[scale = 0.35]{Images/PossibleBehavior4.png}\end{center}
 \end{itemize}
 
 \section{Sample Limit Questions}
@@ -254,5 +254,118 @@ even if the function has a hole/removable point there.
 
 No, the point $(a, K)$ could be a removable point from the function, which the limit would ignore.
 \end{enumerate}
+
+\pagebreak
+\section{The Overall Limit}
+The overall limit takes into account both the right- and left-hand limits to make a statement
+about the function for all values of $x$ close to the value $a$.
+
+We can make the statement $\underset{x \rightarrow a}{\lim}f(x) = L$ for the overall limit iff
+\\$\underset{x \rightarrow{}a^{-}}{\lim}f (x) = L$ and $\underset{x \rightarrow{}a^{+}}{\lim}f (x) = L$.
+
+This means that the overall limit only exists at a value if both the left- and right-hand limits
+go to the same value. Here is a graphical example:
+\begin{center}\includegraphics[scale = 0.5]{Images/OverallLimit1.png}\end{center}
+Sometimes the overall limit doesn't exist even if one of the left- or right-hand limits exists. If
+one of the one-sided limits doesn't exist, then the overall limit does not exist. Here is a graphical
+example:
+\begin{center}\includegraphics[scale = 0.5]{Images/OverallLimit2.png}\end{center}
+Even if both the left- and right-hand limits exist, if they are not equal, then the overall limit
+does not exist. Here is a graphical example:
+\begin{center}\includegraphics[scale = 0.5]{Images/OverallLimit3.png}\end{center}
+
+\pagebreak
+\section{Definition of the Limit}
+\subsection{Basic Definition of the Limit}
+If a function $f (x)$ approaches some value $L$, as $x$ approaches $a$ from
+\textit{both the right and the left}, then \textbf{the limit} of $f (x)$ exists and equals $L$.
+
+If $\underset{x \rightarrow{}a^{-}}{\lim}f (x) = \underset{x \rightarrow{}a^{+}}{\lim}f (x) = L$
+then $\underset{x \rightarrow{}a}{\lim}f (x) = L$.
+
+\subsection{Formal Definition of the Limit}
+Formally, the statement $\underset{x \rightarrow{}a}{\lim}f (x) = L$ is defined as:
+
+For all $\epsilon> 0$, there exists some $\delta> 0$ such that if $0 < |x-a| < \delta$,
+then $|f (x)-L| < \epsilon$.
+
+Explanation:
+The distance between two numbers $y$ and $z$ is given by $|y-z|$. Thus, the very last part of the
+definition is saying that the distance from $f (x)$ to $L$ is less than $\epsilon$; one should think
+of $\epsilon$ as representing a small distance. This close distance occurs if $0 < |x-a| < \delta$;
+that is, if $x$ is within some distance $\delta$ from $a$, but not necessarily if that distance is $0$
+(we don't care about $x=a$ itself).
+
+The ''for all'' and ''there exists'' clauses have to do with how small these distances need to get.
+We want $f (x)$ to eventually get arbitrarily close to $L$, so this statement needs to be satisfied
+no matter how small $\epsilon$ gets. Given any choice of $\epsilon$, we can satisfy the condition
+$|f (x)-L| < \epsilon$ as long as $x$ gets close enough to $a$; the proximity required is measured by
+$\delta$.
+
+\pagebreak
+\section{Estimate Limits}
+\begin{center}\includegraphics[scale = 0.8]{Images/EstimateLimits1.png}\end{center}
+\begin{enumerate}
+\item Determing the following:
+
+\[\underset{x\rightarrow{}-2^{-}}{\lim}f (x) = 3\]
+\[\underset{x\rightarrow{}-2^{+}}{\lim}f (x) = 1\]
+\[\underset{x\rightarrow{}-2}{\lim}f (x) = DNE\]
+\[f (-2) = 2\]
+
+\item Determine the following:
+
+\[\underset{x\rightarrow{}1^{-}}{\lim}f (x) = 2\]
+\[\underset{x\rightarrow{}1^{+}}{\lim}f (x) = 2\]
+\[\underset{x\rightarrow{}1}{\lim}f (x) = 2\]
+\[f (1) = DNE\]
+
+\item Determine the following:
+
+\[\underset{x\rightarrow{}3^{-}}{\lim}f (x) = DNE\]
+\[\underset{x\rightarrow{}3^{+}}{\lim}f (x) = 1\]
+\[\underset{x\rightarrow{}3}{\lim}f (x) = DNE\]
+\[f (3) = 1\]
+
+\end{enumerate}
+
+\pagebreak
+\section{Sample Limit Questions 2}
+\begin{enumerate}
+\item If we know $f (a)$ exists, this means that $\underset{x\rightarrow{}a}{\lim}f (x)$ exists
+
+False, because the function could have a removable point at $x = a$ that would allow $f (a)$ to
+exist, but would not be included in the limit.
+
+\item Suppose that $\underset{x\rightarrow{}a^{-}}{\lim}f (x) = \underset{x\rightarrow{}a^{+}}{\lim}f (x) = 3$.
+Which of the following must be true?
+    \begin{enumerate}
+        \item $\underset{x\rightarrow{}a^{}}{\lim}f (x) = 3$
+        \item $f (a) = 3$
+        \item Both must be true
+        \item Neither is necessarily true.
+    \end{enumerate}
+
+The correct answer is (a), as the requirement for an overall limit being equal to a value is that
+the two one-sided limits both go to that same value. The answer is not (c) because (b) is false, as
+the function could have a removable point at the value $x = a$, making $f (a) \neq 3$.
+
+\item The floor function $\lfloor{}x\rfloor$ is defined as the greatest integer less than or equal to $x$.
+Determine the following:
+\[\underset{x\rightarrow{}2^{-}}{\lim}\lfloor{}x\rfloor = 1\]
+\[\underset{x\rightarrow{}2^{+}}{\lim}\lfloor{}x\rfloor = 2\]
+\[\underset{x\rightarrow{}2}{\lim}\lfloor{}x\rfloor = DNE\]
+\[\lfloor{}2\rfloor = 2\]
+\end{enumerate}
+
+\pagebreak
+\section{Limit Laws}
+If $\underset{x\rightarrow{}a}{\lim}f (x) = L$ and $\underset{x\rightarrow{}a}{\lim}g (x) = M$, then:
+\begin{itemize}
+    \item $\underset{x\rightarrow{}a}{\lim}\left[f (x) + g (x)\right] = L + M$ (Limit Law for Addition)
+    \item $\underset{x\rightarrow{}a}{\lim}\left[f (x) - g (x)\right] = L - M$ (Limit Law for Subtraction)
+    \item $\underset{x\rightarrow{}a}{\lim}\left[f (x) \times g (x)\right] = L \times M$ (Limit Law for Multiplication)
+    \item $\underset{x\rightarrow{}a}{\lim}\left[\frac{f (x)}{g (x)}\right] = \frac{L}{M}$ if $M \neq 0$ (Limit Law for Division)
+\end{itemize}
 
 \end{document}
